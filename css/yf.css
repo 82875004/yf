@@ -1,0 +1,243 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+body {
+	background: #f2f2f2;
+	height: 1200px;
+}
+
+html .body {
+	font-size: 10px;
+}
+
+.head {
+	text-align: center;
+	padding: 20px 0 3px;
+	background: rgba(0, 0, 0, 0.6);
+	//添加阴影
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+	/*选择窗口作为参照物*/
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 5;
+}
+
+.head .link {
+	padding-top: 10px;
+}
+
+.head img {
+	width: 136px;
+}
+
+.head .link a {
+	color: #898989;
+	font-weight: 100;
+	font-size: 14px;
+}
+
+#a1 {
+	color: white;
+}
+
+.head .dis {
+	margin-left: 11%;
+}
+
+.head .link a:hover {
+	color: white;
+}
+
+.body {
+	width: 80%;
+	margin: 12% auto;
+}
+
+.lunbo .swiper-slide img {
+	width: 100%;
+}
+
+.lunbo .swiper-pagination {
+	position: static;
+}
+
+.lunbo .swiper-pagination-bullet {
+	margin: 20px 2%;
+	background: #666;
+	opacity: 1;
+	border: 1px solid #666;
+}
+
+.lunbo .swiper-pagination-bullet-active {
+	background: white;
+}
+
+.lunbo .swiper-container {
+	position: relative;
+	font-size: 0;
+}
+
+.lunbo .txt {
+	height: 42px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+	font-size: 16px;
+	color: white;
+}
+
+.lunbo .txt span {
+	position: absolute;
+	left: 0;
+	top: 44px;
+	animation: move 1s forwards;
+}
+
+
+/*创建关键帧动画*/
+
+@keyframes move {
+	from {
+		top: 42px;
+	}
+	to {
+		top: 10px;
+	}
+}
+
+.body .d1 {
+	font-family: 'STKaiti';
+	color: rgb(102, 102, 102);
+	text-indent: 2em;
+	font-size: 1.3rem;
+	line-height: 3rem;
+	line-height: 2.4rem;
+	margin: 15px 0;
+	border-top: 1px solid rgb(232, 232, 232);
+	border-bottom: 1px solid rgb(232, 232, 232);
+}
+.body .logos {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.logos img {
+	width: 4.5%;
+	margin: 0 10px;
+}
+
+.model {
+	display: block;
+	width: 32%;
+	box-shadow: 2px 2px 2px #E3E3E3;
+	float: left;
+	margin: 2% 0%;
+}
+.models{
+	overflow: hidden;
+}
+.model:nth-child(3n-1){
+	margin: 2% 2%;
+}
+.model img,
+.model .mask {
+	width: 100%;
+	border-radius: 2.5% 2.5% 0 0/ 5% 5% 0 0;
+}
+
+.model .img {
+	position: relative;
+	font-size: 0;
+	text-align: center;
+}
+
+.model .mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	transition: all 0.5s;
+}
+.model:hover .mask{
+	opacity: 1;
+}
+.model .img h1 {
+	font-size: 2rem;
+	color: white;
+}
+
+.model .img p {
+	font-size: 1.4rem;
+	color: white;
+}
+
+.model .txt1 {
+	color: #666;
+	font-size: 1.2rem;
+	text-align: center;
+	margin: 5px 0;
+	background: white;
+	border-radius: 0 0 2.5% 2.5% /0 0 20% 20%;
+}
+
+/*通过媒体查询完成不同屏幕尺寸的监听*/
+
+@media only screen and (max-width:600px) {
+	html,body{
+		font-size: 7px;
+	}
+	.model{
+		width: 49%;
+		margin: 1% 0;
+	}
+	.model:nth-child(3n-1){
+		margin: 1% 0;
+	}
+	.model:nth-child(2n){
+		margin-left: 2%;
+	}
+}
+/*这个样式负责页脚这块*/
+.foot{
+	background:#e0e0e0; 	
+	overflow: hidden; /*清除浮动  对背景样式造成的修改*/
+	padding: 20px 0;
+}
+.foot>div{
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+}
+.foot .left img{
+	width: 30px;
+}
+.foot .left{
+	text-align: right;
+	padding-right:15px;
+}
+.foot .right img{
+	width:120px;
+}
+.foot .right ul{
+	list-style: none;
+}
+.foot .right li{
+	color: #666;
+	line-height: 30px;
+	text-shadow: 1px 2px 2px white;
+}
+.foot .right{
+	border-left: 1px solid #BCBCBC;
+	padding-left: 15px;
+}
